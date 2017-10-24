@@ -8,3 +8,16 @@ SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 ::gp::git push
 ::jupyter::jupyter notebook
 ::conda install all::conda install pandas numpy matplotlib opencv tqdm scikit-learn scikit-image 
+
+::gs:: 
+  send     git add -A {Return}
+  send     git commit -m "auto committed" {Return}
+  send     git push {Return}
+return
+
+::ttt::      ;put some comment here if needet
+  send     switch () {Return}
+  send     {{} {Return}{Return}  ; second return for one blank line
+  send     {}} {Return} 
+  send     Return {Return}
+return       ; AHKs return
