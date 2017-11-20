@@ -9,6 +9,16 @@ SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 ::jn::jupyter notebook
 ::conda install all::conda install pandas numpy matplotlib opencv tqdm scikit-learn scikit-image 
 
+::kjn::
+  send     source activate keras {Return}
+  send     jupyter notebook {Return}
+return
+
+::ks::
+  send     source activate keras {Return}
+  send     spyder {Return}
+return
+
 ::gs:: 
   send     git add -A {Return}
   send     git commit -m "auto committed" {Return}
