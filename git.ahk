@@ -20,6 +20,7 @@ return
 return
 
 ::gs:: 
+  send     git pull {Return}
   send     git add -A {Return}
   send     git commit -m "auto committed" {Return}
   send     git push {Return}
